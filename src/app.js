@@ -23,7 +23,7 @@ app.post("/repositories", (request, response) => {
       title,
       url,
       techs,
-      like=0
+      like:0
     };
     repositories.push(repository);
     return response.json(repository);
@@ -76,7 +76,7 @@ app.post("/repositories/:id/like", (request, response) => {
   repository = repositories[repositoryIndex];
   repository.like += 1;
   
-  return response.json(repository)      
+  return response.json(repository);     
 });
 
 module.exports = app;
